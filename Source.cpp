@@ -65,3 +65,23 @@ void display(Node* head)
         head = head->next;
     }
 }
+int main()
+{
+    // Creating the list 1->2->4->5
+    Node* head = NULL;
+    head = getNode(1);
+    head->next = getNode(2);
+    head->next->next = getNode(4);
+    head->next->next->next = getNode(5);
+  
+    cout << "Linked list before insertion: ";
+    display(head);
+  
+    int x = 3;
+    insertAtMid(&head, x);
+  
+    cout << "\nLinked list after insertion: ";
+    display(head);
+  
+    return 0;
+}
